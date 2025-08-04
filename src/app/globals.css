@@ -1,0 +1,308 @@
+@import "tailwindcss";
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-off-white: #f2f2f2;
+  --theme-color:#C54589
+}
+
+@theme {
+  --color-off-white: var(--color-off-white);
+  --color-themeColor:var(--theme-color)
+  --font-poppins: var(--font-poppins);
+  --breakpoint-sxl:1080px;
+  --radius-5:20px;
+  --shadow-art:0px 8px 32px 0px #0000000F;
+  --breakpoint-2xl:105rem;
+}
+html{
+  scroll-padding-top: 95px;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.header-initial {
+  padding: 20px 30px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  top: 40px;
+  border-radius: 100px;
+  border: 1px solid #4b4b4b;
+  @media only screen and (max-width: 767px) {
+    top: 20px;
+    padding: 10px 20px;
+  }
+}
+
+.header {
+  padding: 12px 24px;
+  top: 0px;
+}
+
+.header-blur {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #ffffff0d;
+}
+
+.hero-banner {
+  background-image: url("/images/blend-image.svg");
+  width: 100%;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(
+      to top,
+      var(--navyBlue),
+      var(--theme-color)
+    );
+  }
+}
+
+.work-banner {
+  background-image: url("/images/work-bg-box.svg");
+  width: 100%;
+  background-size: cover;
+  /* height:100vh; */
+  background-position: 50%;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 767px) {
+    height:100%;
+  }
+}
+
+
+.section-padding {
+  padding: 6.25rem;
+}
+.section-padding-top {
+  padding: 6rem 2.5rem 3rem;
+}
+.section-padding-bottom {
+  padding: 3rem 2.5rem 6rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  .section-padding {
+    padding: 5rem;
+  }
+  .section-padding-top {
+    padding: 4rem 2rem 2rem;
+  }
+  .section-padding-bottom {
+    padding: 2rem 2rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    padding: 12px;
+    top: 0px;
+  }
+  .section-padding {
+    padding: 2rem 1.25rem;
+  }
+  .section-padding-top {
+    padding: 2rem 1.25rem 1rem;
+  }
+  .section-padding-bottom {
+    padding: 1rem 1.25rem 2rem;
+  }
+}
+
+.theme-gradient {
+  background-image: linear-gradient(91.84deg, #c54589 37.86%, #715cff 56.42%);
+}
+.text-gradient {
+  background-image: linear-gradient(91.09deg, #C54589 19.5%, #715CFF 97.48%);
+}
+.big-text-gradient{
+  background-image: linear-gradient(90.49deg, #FF0F82 25.24%, #715CFF 58.59%, #4441FF 91.95%);
+}
+.text-gradient-2 {
+  background-image: linear-gradient(91.18deg, #C54589 5.42%, #715CFF 18.57%);
+}
+.header-gradient{
+  background-image: linear-gradient(92.65deg, #C54589 81.58%, #715CFF 95.58%);
+}
+.contact-gradient{
+  background-image: linear-gradient(91.88deg, #C54589 74.66%, #715CFF 101.03%);
+}
+
+.primary-button {
+  background-image: linear-gradient(91.09deg, #c54589 19.5%, #715cff 97.48%);
+  border: 0;
+  border-radius: 36px;
+  box-sizing: border-box;
+  color: var(--color-off-white);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 1px 2px 1px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  @media only screen and (max-width: 767px) {
+    border-radius: 30px;
+    font-size: 18px;
+  }
+}
+
+.primary-button:active,
+.primary-button:hover {
+  outline: 0;
+}
+
+.primary-button span {
+  padding: 15px 30px;
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  @media only screen and (max-width: 767px) {
+    padding: 12px 20px;
+  }
+}
+.primary-button.variant-dark span{
+  background-color: var(--color-black);
+  color:var(--color-white)
+}
+
+.primary-button.variant-light span{
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.primary-button.variant-light span:hover{
+  color: var(--color-off-white);
+}
+
+.primary-button:hover span {
+  background: none;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+  border: 0;
+}
+
+a.active{
+  border-bottom: 2px solid;
+  border-image:  linear-gradient(91.09deg, #C54589 19.5%, #715CFF 97.48%) 1 stretch;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(91.09deg, #C54589 19.5%, #715CFF 97.48%);
+  transition: transform 0.25s ease-out;
+}
+
+
+a.hover-underline-animation:not(.active):hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+  transform-origin: bottom left;
+}
+
+.hover-underline-animation.center::after {
+  transform-origin: bottom center;
+}
+
+.hover-underline-animation.center:hover::after {
+  transform-origin: bottom center;
+}
+
+.hover-underline-animation.right::after {
+  transform-origin: bottom left;
+}
+
+.hover-underline-animation.right:hover::after {
+  transform-origin: bottom right;
+}
+
+.footer-social-link:hover{
+  background:linear-gradient(91.09deg, #c54589 19.5%, #715cff 97.48%);
+}
+
+.form-field {
+  size: 18px;
+  line-height: 28px;
+  padding: 15px 20px;
+  padding-bottom: 15px !important;
+  border-width: 1px;
+  border-color: #2d3540;
+  color: var(--color-off-white);
+  border-style: solid;
+  border-radius: 30px;
+  outline: none;
+  background:#09081B;
+  @media screen and (max-width: 767px) {
+    padding: 10px 14px;
+    padding-bottom: 12px !important;
+    size: 16px;
+    line-height: 24px;
+  }
+}
+
+.form-field:focus {
+    border-width: 1px 1px 2px 1px;
+    padding-bottom: 14px !important;
+    border-style: solid;
+    border-color: transparent;
+    background: linear-gradient(#081120, #081120) padding-box,
+    linear-gradient(91.09deg, #C54589 19.5%, #715CFF 97.48%)
+          border-box;
+    border-radius: 30px;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 10px !important;
+    }
+}
+
+.list-border{
+  background-image:linear-gradient(91.09deg, #c54589 19.5%, #715cff 97.48%)
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
